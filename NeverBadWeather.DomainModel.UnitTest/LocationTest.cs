@@ -51,30 +51,30 @@ namespace NeverBadWeather.DomainModel.UnitTest
         public void TestGetDistanceFrom()
         {
             Location destination = new Location(40.53562f, 53.47384f);
-            Location loca = new Location(42.99553f, 41.99553f);
+            Location location = new Location(42.99553f, 41.99553f);
 
-            var deltaLat = loca.Latitude - destination.Latitude;
-            var deltaLon = loca.Longitude - destination.Longitude;
+            var deltaLatitude = location.Latitude - destination.Latitude;
+            var deltaLongitude = location.Longitude - destination.Longitude;
 
             var answer = 11.73894193120487d;
 
-            Assert.AreEqual(Math.Sqrt(deltaLon * deltaLon + deltaLat * deltaLat), answer, 0.000002f);
+            Assert.AreEqual(Math.Sqrt(deltaLongitude * deltaLongitude + deltaLatitude * deltaLatitude), answer, 0.000002f);
 
         }
 
         [Test]
         public void  TestCreateWithDelta()
         {
-            Location loca = new Location(2.12345f, 1.24245f);
+            Location location = new Location(2.12345f, 1.24245f);
 
-            float deltaLat = 1.42512f;
-            float deltaLon = 2.42545f;
+            float deltaLatitude = 1.42512f;
+            float deltaLongitude = 2.42545f;
 
             var first = 2.12345f + 1.42512f;
             var second = 1.24245f + 2.42545f;
 
-            Assert.AreEqual(first, Convert.ToSingle(loca.Latitude) + deltaLat);
-            Assert.AreEqual(second, Convert.ToSingle(loca.Longitude) + deltaLon);
+            Assert.AreEqual(first, Convert.ToSingle(location.Latitude) + deltaLatitude);
+            Assert.AreEqual(second, Convert.ToSingle(location.Longitude) + deltaLongitude);
         }
     }
 }

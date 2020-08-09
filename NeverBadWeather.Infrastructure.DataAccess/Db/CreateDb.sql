@@ -1,4 +1,6 @@
-﻿CREATE TABLE [dbo].[ClothingRule](
+﻿USE NeverBadWeather;
+
+CREATE TABLE [dbo].[ClothingRule](
 	[Id] [uniqueidentifier] NOT NULL,
 	[IsRaining] [bit] NULL,
 	[FromTemperature] [int] NOT NULL,

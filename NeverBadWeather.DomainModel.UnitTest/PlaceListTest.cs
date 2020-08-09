@@ -7,17 +7,21 @@ namespace NeverBadWeather.DomainModel.UnitTest
 {
     public class PlaceListTest
     {
-        //[Test]
-        //public void DoesItFindThePlace()
-        //{
-        //    // arrange
-        //    var place = new Place();
+        [Test]
+        public void TestGetClosestPlace()
+        {
 
-        //    // act
-        //    var isLoaded = Place.();
+        //arrange
+        var min = new Location(-1,-1);
+        var max = new Location(1,1);
+        var bestPlace = new Location(1,1);
 
-        //    // assert
-        //    Assert.IsTrue(isLoaded);
-        //}
+        //act
+        var isItHere = bestPlace.IsWithin(min,max);
+
+        //assert
+        Assert.IsTrue(isItHere); 
     }
-}
+        }
+    }
+

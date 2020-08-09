@@ -1,11 +1,31 @@
 ﻿appContext.view.add('main', function () {
     const time = appContext.model.inputs.weatherRecommendation.time;
     document.getElementById('app').innerHTML = `
-        <small><a href="javascript:goTo('rules')">Rediger klesinnstillingene</a></small>
 
-        <hr/>
+    <small><a href="javascript:goTo('rules')">Rediger klesinnstillingene</a></small>
 
-        <h3>Aldri dårlig vær!</h3>
+    <hr/>
+
+    <h3>Aldri dårlig vær!</h3>
+
+<a class="loggeinn"href="javascript:goTo('login')">Logg inn</a>
+</br>
+</br>
+
+<div class="LocationForm">
+     <form action="/action_page.php">
+     <label for="location">Hvor er du?</label>
+     <select name="location" id="location">
+     <option value="larvik">Larvik</option>
+     <option value="tønsberg">Tønsberg</option>
+     <option value="sandefjord">Sandefjord</option>
+     <option value="horten">Horten</option>
+     </select>
+     <br><br>
+     <button onclick="VelgeSted()" type="submit" value="submit">Velg!</button>
+     </form></div>
+     </br>
+     </br>
 
         Hvilken dag vil du ha klesråd for? <br/>
         <input type="date" oninput="appContext.model.date = this.value" value="${time.date}"/><br/>
@@ -24,7 +44,7 @@
 
         ${getRecommendationHtml()}
 
-    `;
+`;
 });
 
 function getRecommendationHtml() {
@@ -60,4 +80,17 @@ function getRecommendationHtml() {
         </ul>
 
     `;
+}
+
+function VelgeSted() {
+
+    //denne skal da føre deg til stedet du har valgt
+    // - Larvik
+    //https://www.yr.no/stad/Noreg/Vestfold_og_Telemark/Larvik/varsel.xml  ny link ? 
+    // - Tønsberg
+    //https://www.yr.no/stad/Noreg/Vestfold_og_Telemark/Tønsberg/varsel.xml  ny link ? 
+    // - Sandefjord
+    //https://www.yr.no/stad/Noreg/Vestfold_og_Telemark/Sandefjord/varsel.xml
+    // - Horten
+    //https://www.yr.no/stad/Noreg/Vestfold_og_Telemark/Horten/varsel.xml
 }
