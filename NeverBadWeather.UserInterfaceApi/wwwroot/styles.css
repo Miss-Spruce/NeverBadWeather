@@ -10,9 +10,28 @@ tr:nth-child(even) {
 table {
     border-collapse: collapse;
 }
-
+body {
+    font-family: 'Comic Sans MS';
+}
 /* Main side */
+.velgstedKnapp {
+    background-color: cornflowerblue;
+    font-size: 15px;
+    color: white;
+}
 
+.klesanbefalingKnapp {
+    font-size: 15px;
+    background-color: cornflowerblue;
+    color: white;
+}
+h3 {
+    color: cornflowerblue;
+    font-size: 20px;
+}
 /* Login side */
+h1 {
+    color: cornflowerblue;
+}
 
 /* NewUser side */
