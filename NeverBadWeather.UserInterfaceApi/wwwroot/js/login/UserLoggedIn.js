@@ -11,7 +11,7 @@
 </br>
 </br>
 
-<div class="LocationForm">
+<div class="LocationForm" onchange="locationSelecter">
      <form action="/action_page.php">
      <label for="location">Hvor er du?</label>
      <select name="location" id="location">
@@ -21,13 +21,13 @@
      <option value="horten">Horten</option>
      </select>
      <br><br>
-     <button class="velgstedKnapp" onclick="VelgeSted()" type="submit">Velg!</button>
+   <button class="velgstedKnapp" onclick="VelgeSted()" type="submit">Velg!</button>
      </form></div>
      </br>
      </br>
 
         Hvilken dag vil du ha klesråd for? <br/>
-        <input type="date" oninput="appContext.model.date = this.value" value="${time.date}"/><br/>
+        <input class="timeChoser" type="date" oninput="appContext.model.date = this.value" value="${time.date}"/><br/>
         Hvilken tidsperiode?<br/>
         Fra  
         <span class="timeStepUpDown" onclick="changeTime('from',-1)">▼</span
@@ -53,7 +53,7 @@ function getRecommendationHtml() {
     const weatherForecast = recommendation.weatherForecast;
 
     return `
-        <h4>Klesanbefaling for ${place}</h4>
+       <div class="anbefaling" <h4>Klesanbefaling for ${place}</h4>
         <table>
             <tr>
                 <th>Fra</th>
@@ -76,11 +76,12 @@ function getRecommendationHtml() {
                 <li>${f}</li>
             `).join('')}
         </ul>
+</div>
 
     `;
 }
 
-function VelgeSted() {
+//function VelgeSted() {
 
     //denne skal da føre deg til stedet du har valgt
     // - Larvik
@@ -91,4 +92,18 @@ function VelgeSted() {
     //https://www.yr.no/stad/Noreg/Vestfold_og_Telemark/Sandefjord/varsel.xml
     // - Horten
     //https://www.yr.no/stad/Noreg/Vestfold_og_Telemark/Horten/varsel.xml
-}
+//}
+
+//function locationSelecter() {
+//model {
+//    location{
+//        Sandefjord{
+//            X: 44.24124,
+//                Y: 32.21314,
+//},
+//        Tønsberg{
+//            X: 23.1231,
+//                Y: 21.2313
+//            };
+//    }
+//}

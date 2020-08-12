@@ -6,9 +6,11 @@
 </br>
 <div class="UserName" id="userBoxTxt"> Brukernavn </div>
 <input class="InsertUsername" type="text" id="usernameInput" placeholder="Brukernavn">
+</br> </br>
 <button class="loginButton" onclick="login()">Logg inn</div></button>
  </br> </br>
 <a href="javascript:goTo('newUser')">Registrer ny bruker her!</a>
+
 `;
 });
 function login() {

@@ -10,28 +10,88 @@ tr:nth-child(even) {
 table {
     border-collapse: collapse;
 }
+
+a {
+    color: black;
+}
 body {
+    margin-top: 200px;
+    background-image: url('https://www.almanac.com/sites/default/files/image_nodes/rainbow-weather.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     font-family: 'Comic Sans MS';
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 1px 1px white;
+    display:block;
 }
 /* Main side */
-.velgstedKnapp {
-    background-color: cornflowerblue;
-    font-size: 15px;
-    color: white;
-}
 
-.klesanbefalingKnapp {
-    font-size: 15px;
-    background-color: cornflowerblue;
-    color: white;
-}
 h3 {
-    color: cornflowerblue;
-    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+        font-size: 25px;
 }
 /* Login side */
 h1 {
-    color: cornflowerblue;
+    color: white;
+        text-shadow: 2px 2px black;
 }
 
 /* NewUser side */
+
+.velgstedKnapp, .klesanbefalingKnapp, .loginButton, .tilbakeStart {
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color: #79bbff;
+    border-radius: 5px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+}
+
+.velgstedKnapp:hover, .klesanbefalingKnapp:hover, .loginButton:hover, .tilbakeStart:hover {
+    background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color: #378de5;
+}
+
+.velgstedKnapp:active, .klesanbefalingKnapp:active, .loginButton:active, .tilbakeStart:active {
+    position: relative;
+    top: 1px;
+}
+
+.InsertUsername {
+    font-size: 20px;
+}
+.LocationForm {
+    font-size: 20px;
+}
+#location {
+    font-size: 18px;
+}
+.timeChoser {
+    font-size: 20px;
+}
+.anbefaling {
+ margin-left: auto;
+ margin-right: auto;
+text-align: center;
+display:block;
+width: 400px;
+}
+.anbefalingResultat {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+text-align: center;
+    padding-top: 50%; 
+}
